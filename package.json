@@ -1,0 +1,12 @@
+{
+  "name": "huafuture",
+  "version": "1.0.0",
+  "description": "华研究 · 期货研究管理平台 — HuaFuture Futures Research Portal",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "preview": "node build.js && echo 'Open index.html in your browser'"
+  },
+  "keywords": ["research", "reports", "futures", "commodities", "domestic", "international"],
+  "license": "MIT"
+}

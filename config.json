@@ -1,0 +1,18 @@
+{
+  "siteTitle": "国仕无双 · 期货研究智库",
+  "siteSubtitle": "HuaFuture Research Reports",
+  "siteDescription": "研究覆盖国内期货与国际期货 — 专业深度，套利发现",
+  "categories": {
+    "Domestic": { "label": "国内", "badge": "国内", "color": "#d97706" },
+    "International": { "label": "国际", "badge": "国际", "color": "#1d4ed8" }
+  },
+  "namingConvention": {
+    "description": "将新报告放入 Domestic/ 或 International/ 目录下，建议文件名格式如下：",
+    "format": "{品种}-{合约代码}-{报告类型}.html",
+    "examples": {
+      "Domestic": "螺纹钢-RB2610-深度分析.html",
+      "International": "原油-SC2506-技术分析.html"
+    },
+    "reportTypes": ["深度分析", "技术分析", "基本面研究", "套利策略", "期限结构", "期现基差", "综合评级", "专题报告"]
+  }
+}

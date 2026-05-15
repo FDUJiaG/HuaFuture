@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)blob:https://www.kimi.com/8237078e-f932-4db5-a2f1-5079175f1822 -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>螺纹钢期货（RB2610）综合评级报告</title>
+<style>
+:root {
+  --primary: #1e3a5f;
+  --accent: #2563eb;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --warning: #d97706;
+  --neutral: #6b7280;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+.header {
+  background: linear-gradient(135deg, var(--primary) 0%, #0f172a 100%);
+  color: white;
+  padding: 40px 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(30,58,95,0.2);
+}
+.header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.header .meta { opacity: 0.85; font-size: 14px; }
+.header .badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+.gauge-section {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  text-align: center;
+}
+.gauge-bar {
+  position: relative;
+  height: 24px;
+  background: linear-gradient(to right, var(--danger) 0%, var(--warning) 40%, var(--neutral) 50%, #65a30d 60%, var(--success) 100%);
+  border-radius: 12px;
+  margin: 20px 0;
+  overflow: visible;
+}
+.gauge-marker {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 44px;
+  background: #0f172a;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+.score-value {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--success);
+  line-height: 1;
+}
+.score-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--success);
+  margin-top: 8px;
+}
+.score-desc {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+}
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  border: 1px solid var(--border);
+}
+.card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 12px 0;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 13px;
+}
+tr:hover { background: #f8fafc; }
+.text-center { text-align: center; }
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.tag-bearish { background: #fee2e2; color: var(--danger); }
+.tag-weak-bearish { background: #ffedd5; color: var(--warning); }
+.tag-neutral { background: #f3f4f6; color: var(--neutral); }
+.tag-bullish { background: #dcfce7; color: var(--success); }
+.module-detail {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px 0;
+  border-left: 4px solid var(--accent);
+}
+.module-detail h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.module-detail ul {
+  margin-left: 18px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.module-detail ul li { margin-bottom: 4px; }
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.strategy-box {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 16px;
+}
+.strategy-box .label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.strategy-box .value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+.risk-box {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 12px;
+}
+.risk-box h4 { color: var(--danger); font-size: 14px; margin-bottom: 8px; }
+.footer {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-top: 40px;
+  padding: 24px;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+  margin-bottom: 20px;
+  z-index: 10;
+  overflow-x: auto;
+}
+.nav-inner { display: flex; gap: 8px; max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.nav a {
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.nav a:hover { background: #f1f5f9; color: var(--primary); }
+@media (max-width: 640px) {
+  .header h1 { font-size: 22px; }
+  .score-value { font-size: 36px; }
+  th, td { padding: 8px; font-size: 12px; }
+}
+</style>
+<!--<base target="_blank">--><base href="." target="_blank">
+</head>
+<body>
+<div class="nav">
+  <div class="nav-inner">
+    <a href="blob:https://www.kimi.com/8237078e-f932-4db5-a2f1-5079175f1822#overview">评级总览</a>
+    <a href="blob:https://www.kimi.com/8237078e-f932-4db5-a2f1-5079175f1822#weights">权重设定</a>
+    <a href="blob:https://www.kimi.com/8237078e-f932-4db5-a2f1-5079175f1822#modules">逐模块分析</a>
+    <a href="blob:https://www.kimi.com/8237078e-f932-4db5-a2f1-5079175f1822#summary">评分汇总</a>
+    <a href="blob:https://www.kimi.com/8237078e-f932-4db5-a2f1-5079175f1822#conclusion">投资结论</a>
+    <a href="blob:https://www.kimi.com/8237078e-f932-4db5-a2f1-5079175f1822#monitor">关键监测</a>
+  </div>
+</div>
+<div class="container">
+  <div class="header">
+    <h1>螺纹钢期货（RB2610）综合评级报告</h1>
+    <div class="meta">基于 FCRS（Futures Comprehensive Rating System）框架 | 数据截止：2026年5月13日</div>
+    <div class="badge">品种类型：黑色系 | 持仓占比：5.37%</div>
+  </div>
+  <div class="gauge-section" id="overview">
+    <div style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">综合评分（-100 强烈看空 ~ +100 强烈看多）</div>
+    <div class="score-value">25</div>
+    <div class="score-label">偏多（Bullish）</div>
+    <div class="score-desc">总库存八连降+资金增仓40万手+政策7万亿投资+成本推升+周线四连阳创新高... vs 厂库由降转增+表需环比-19%（节日因素）+5月中下旬需求走弱压力+上方空间有限...</div>
+    <div style="margin-top:24px;">
+      <div class="gauge-bar">
+        <div class="gauge-marker" style="left: 62.5%;"></div>
+      </div>
+      <div class="gauge-labels">
+        <span>-100 强烈看空</span>
+        <span>-60 看空</span>
+        <span>0 中性</span>
+        <span>+60 看多</span>
+        <span>+100 强烈看多</span>
+      </div>
+    </div>
+  </div>
+  <div class="card" id="modules">
+    <h2>🔬 逐模块评分详情（-100 ~ +100）</h2>
+    
+        <div class="module-detail" style="border-left-color:var(--neutral);">
+            <h4>产业链供需（25%）— 得分：30 | 加权：7.50</h4>
+            <ul><li>总库存<strong>八连降</strong>，社库547.07万吨环比-7.46万吨，去库节奏顺畅</li><li>厂库179.79万吨环比+5.90万吨（节日因素），同比仍处低位</li><li>周产量196.65万吨环比-4.96%，产能利用率降至45%下方，供给收缩</li><li>表观需求197.88万吨环比-19.28%（五一假期影响），同比-16.09万吨</li><li>出口延续回升态势，海外钢价坚挺，内外价差优势仍在</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>库存持续去化是核心利多，产量主动收缩配合需求韧性，基本面相对稳健。</p>
+        </div>
+        
+        <div class="module-detail" style="border-left-color:var(--success);">
+            <h4>宏观环境（15%）— 得分：35 | 加权：5.25</h4>
+            <ul><li>国常会强调水网、电网、算力网等<strong>"六张网"</strong>建设</li><li>重点领域投资超<strong>7万亿元</strong>，基建投资累计完成4.56万亿元</li><li>房地产政策边际宽松，保交楼专项借款持续推进</li><li>特朗普5月13-15日访华，中美经贸关系缓和预期</li><li>一季度GDP同比增长稳健，CPI同比上涨1.0%，通胀温和</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>政策端形成强力托底，7万亿投资规模对建筑用钢需求形成直接拉动。</p>
+        </div>
+        
+        <div class="module-detail" style="border-left-color:var(--neutral);">
+            <h4>跨市场联动（10%）— 得分：25 | 加权：2.50</h4>
+            <ul><li>铁矿石价格走强，青岛港PB粉800元/吨，成本支撑上移</li><li>焦炭第三轮提涨落地，焦煤价格反弹</li><li>BDI海运指数3,034点，运费高企推升进口成本</li><li>废钢价格坚挺，电炉成本支撑显现</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>原料端全面上涨，成本推动型涨价对钢价形成支撑。</p>
+        </div>
+        
+        <div class="module-detail" style="border-left-color:var(--neutral);">
+            <h4>市场结构（10%）— 得分：15 | 加权：1.50</h4>
+            <ul><li>现货3,270元/吨，期货3,263元/吨，<strong>基差+7元/吨转正</strong></li><li>建材成交七连增，现货成交活跃</li><li>10-1价差-34元/吨，近弱远强结构</li><li>仓单129,526吨环比+1,500吨，仓单压力有限</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>基差转正表明现货强于期货，期限结构合理，近月合约受现货支撑。</p>
+        </div>
+        
+        <div class="module-detail" style="border-left-color:var(--neutral);">
+            <h4>资金与情绪（10%）— 得分：30 | 加权：3.00</h4>
+            <ul><li>RB2610合约<strong>5个交易日增仓近40万手</strong>，总持仓276.58万手</li><li>前20名净持仓净多<strong>101,367张</strong>，较上周增加53,051张</li><li>成交量832,174手，资金情绪亢奋</li><li>多头主动进攻，空头被动撤退</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>资金大幅流入是价格上涨的直接推手，增仓上行确认突破有效性。</p>
+        </div>
+        
+        <div class="module-detail" style="border-left-color:var(--neutral);">
+            <h4>政策与事件（10%）— 得分：20 | 加权：2.00</h4>
+            <ul><li><strong>宝钢6月热轧上调100元/吨</strong>，沙钢5月中旬上调50元/吨</li><li>主流钢厂集体涨价，挺价意愿强烈</li><li>第三轮中央生态环保督察启动，限产预期升温</li><li>粗钢压减政策预期仍存，但执行力度待观察</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>钢厂涨价形成现货端支撑，环保督察增加供给收缩预期。</p>
+        </div>
+        
+        <div class="module-detail" style="border-left-color:var(--neutral);">
+            <h4>技术分析（10%）— 得分：25 | 加权：2.50</h4>
+            <ul><li>主力站上<strong>3,200元整数关口</strong>，创2025年四季度以来新高</li><li><strong>周线四连阳</strong>，MACD金叉向上，短期多头占优</li><li>站稳5日、10日、20日均线上方，均线多头排列</li><li>上方目标3,300元，下方支撑3,200元/3,150元</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>技术形态强势，突破关键整数关口后打开上行空间，但需警惕冲高回落。</p>
+        </div>
+        
+        <div class="module-detail" style="border-left-color:var(--neutral);">
+            <h4>估值与成本（5%）— 得分：10 | 加权：0.50</h4>
+            <ul><li>钢厂盈利率<strong>60.18%</strong>环比+9.09个百分点</li><li>盘面利润-184.84元/吨但回升17.76元，亏损收窄</li><li>现货利润改善，钢厂复产意愿增强</li><li>成本推动型涨价，利润修复空间受限</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>利润修复是双刃剑，既支撑复产又限制上方空间。</p>
+        </div>
+        
+        <div class="module-detail" style="border-left-color:var(--neutral);">
+            <h4>季节性（5%）— 得分：10 | 加权：0.50</h4>
+            <ul><li>5月中下旬需求面临走弱压力，季节性转弱</li><li>当前仍处旺季中后段，需求有韧性</li><li>南方雨季临近，户外施工受限</li><li>金九银十预期尚远，短期季节性中性</li></ul>
+            <p style="margin-top:8px;font-size:13px;color:var(--text);"><strong>逻辑：</strong>旺季尾声但尚未结束，季节性对当前价格影响有限，但需警惕5月下旬转弱。</p>
+        </div>
+        
+  </div>
+  <div class="card" id="summary">
+    <h2>📋 综合评分汇总</h2>
+    <table>
+      <thead>
+        <tr><th>模块</th><th class="text-center">权重</th><th class="text-center">得分</th><th class="text-center">加权得分</th><th class="text-center">评级标签</th></tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+            <td>产业链供需</td>
+            <td class="text-center">25%</td>
+            <td class="text-center" style="color:var(--neutral);font-weight:700;">30</td>
+            <td class="text-center">7.50</td>
+            <td class="text-center"><span class="tag tag-bullish">去库持续</span></td>
+        </tr>
+        
+        <tr>
+            <td>宏观环境</td>
+            <td class="text-center">15%</td>
+            <td class="text-center" style="color:var(--success);font-weight:700;">35</td>
+            <td class="text-center">5.25</td>
+            <td class="text-center"><span class="tag tag-bullish">政策强力</span></td>
+        </tr>
+        
+        <tr>
+            <td>跨市场联动</td>
+            <td class="text-center">10%</td>
+            <td class="text-center" style="color:var(--neutral);font-weight:700;">25</td>
+            <td class="text-center">2.50</td>
+            <td class="text-center"><span class="tag tag-bullish">成本推升</span></td>
+        </tr>
+        
+        <tr>
+            <td>市场结构</td>
+            <td class="text-center">10%</td>
+            <td class="text-center" style="color:var(--neutral);font-weight:700;">15</td>
+            <td class="text-center">1.50</td>
+            <td class="text-center"><span class="tag tag-neutral">基差转正</span></td>
+        </tr>
+        
+        <tr>
+            <td>资金与情绪</td>
+            <td class="text-center">10%</td>
+            <td class="text-center" style="color:var(--neutral);font-weight:700;">30</td>
+            <td class="text-center">3.00</td>
+            <td class="text-center"><span class="tag tag-bullish">资金涌入</span></td>
+        </tr>
+        
+        <tr>
+            <td>政策与事件</td>
+            <td class="text-center">10%</td>
+            <td class="text-center" style="color:var(--neutral);font-weight:700;">20</td>
+            <td class="text-center">2.00</td>
+            <td class="text-center"><span class="tag tag-neutral">钢厂涨价</span></td>
+        </tr>
+        
+        <tr>
+            <td>技术分析</td>
+            <td class="text-center">10%</td>
+            <td class="text-center" style="color:var(--neutral);font-weight:700;">25</td>
+            <td class="text-center">2.50</td>
+            <td class="text-center"><span class="tag tag-bullish">创新高</span></td>
+        </tr>
+        
+        <tr>
+            <td>估值与成本</td>
+            <td class="text-center">5%</td>
+            <td class="text-center" style="color:var(--neutral);font-weight:700;">10</td>
+            <td class="text-center">0.50</td>
+            <td class="text-center"><span class="tag tag-neutral">利润修复</span></td>
+        </tr>
+        
+        <tr>
+            <td>季节性</td>
+            <td class="text-center">5%</td>
+            <td class="text-center" style="color:var(--neutral);font-weight:700;">10</td>
+            <td class="text-center">0.50</td>
+            <td class="text-center"><span class="tag tag-neutral">旺季尾声</span></td>
+        </tr>
+        
+        <tr style="background:#f1f5f9;font-weight:700;">
+          <td>综合得分</td>
+          <td class="text-center">100%</td>
+          <td class="text-center">—</td>
+          <td class="text-center" style="color:var(--success);font-size:16px;">25.0</td>
+          <td class="text-center"><span class="tag tag-bullish">偏多（Bullish）</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card" id="conclusion">
+    <h2>🎯 投资结论与策略建议</h2>
+    <h3>核心判断</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+      <div style="background:#fef2f2;border-radius:12px;padding:16px;border-left:4px solid var(--danger);">
+        <div style="font-size:13px;font-weight:700;color:var(--danger);margin-bottom:8px;">🔴 空头逻辑</div>
+        <div style="font-size:13px;color:var(--text-secondary);">厂库由降转增+表需环比-19%（节日因素）+5月中下旬需求走弱压力+上方空间有限</div>
+      </div>
+      <div style="background:#f0fdf4;border-radius:12px;padding:16px;border-left:4px solid var(--success);">
+        <div style="font-size:13px;font-weight:700;color:var(--success);margin-bottom:8px;">🟢 多头逻辑</div>
+        <div style="font-size:13px;color:var(--text-secondary);">总库存八连降+资金增仓40万手+政策7万亿投资+成本推升+周线四连阳创新高</div>
+      </div>
+    </div>
+    <h3>策略建议</h3>
+    <div class="strategy-grid">
+      <div class="strategy-box">
+        <div class="label">单边方向</div>
+        <div class="value">偏多对待</div>
+      </div>
+      <div class="strategy-box">
+        <div class="label">仓位建议</div>
+        <div class="value">18%</div>
+      </div>
+      <div class="strategy-box">
+        <div class="label">操作区间</div>
+        <div class="value">3,200-3,300</div>
+      </div>
+      <div class="strategy-box">
+        <div class="label">入场策略</div>
+        <div class="value">3,200以上持多，3,300附近减仓；跌破3,200止盈</div>
+      </div>
+    </div>
+  </div>
+  <div class="card" id="monitor">
+    <h2>👁️ 关键监测指标（未来2-4周）</h2>
+    <table>
+      <thead>
+        <tr><th style="width:80px;">优先级</th><th>监测指标</th><th>阈值/信号</th></tr>
+      </thead>
+      <tbody>
+        
+        <tr><td><span class="tag tag-bearish">★★★</span></td><td><strong>表需恢复</strong></td><td>节后表需能否回升至240万吨以上</td></tr>
+        
+        <tr><td><span class="tag tag-weak-bearish">★★☆</span></td><td><strong>厂库变化</strong></td><td>厂库是否停止累库转降</td></tr>
+        
+        <tr><td><span class="tag tag-neutral">★☆☆</span></td><td><strong>政策落地</strong></td><td>"六张网"投资具体项目开工情况</td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <div class="footer">
+    <p>本报告基于 FCRS（Futures Comprehensive Rating System）框架生成</p>
+    <p>数据截止：2026年5月13日 | 仅供参考，不构成投资建议</p>
+  </div>
+</div>
+
+
+<!-- HuaFuture: back-to-home button -->
+<a href="../index.html" class="huafuture-back-btn" target="_self">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+  </svg>
+  返回首页
+</a>
+<style>
+  .huafuture-back-btn {
+    position: fixed !important;
+    bottom: 28px !important;
+    right: 28px !important;
+    z-index: 99999 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 10px 22px !important;
+    background: rgba(74, 20, 20, 0.75) !important;
+    color: #c9a84c !important;
+    border: 1px solid rgba(201, 168, 76, 0.25) !important;
+    border-radius: 999px !important;
+    font-family: "Inter", "Noto Sans SC", system-ui, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
+    transition: all 0.25s ease !important;
+    cursor: pointer !important;
+    user-select: none !important;
+  }
+  .huafuture-back-btn:hover {
+    background: rgba(74, 20, 20, 0.95) !important;
+    border-color: rgba(201, 168, 76, 0.5) !important;
+    box-shadow: 0 6px 28px rgba(201, 168, 76, 0.18) !important;
+    transform: translateY(-2px) !important;
+  }
+  .huafuture-back-btn svg {
+    transition: transform 0.2s ease !important;
+  }
+  .huafuture-back-btn:hover svg {
+    transform: translateX(-3px) !important;
+  }
+</style>
+
+</body></html>
